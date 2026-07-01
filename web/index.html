@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Scripts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="scoreboard-root" class="container">
+    <div class="scoreboard-backdrop"></div>
+
+    <section class="scoreboard-shell">
+      <header class="scoreboard-head">
+        <div class="head-brand">
+          <img src="images/logos/server-logo.png" alt="Scoreboard Logo" class="logo" />
+          <div>
+            <p class="section-label">Server overview</p>
+            <h1 id="server_name">Neon Scripts</h1>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <button type="button" id="robbery-button" class="stat-card stat-card--action">
+            <span class="stat-label">Robbery</span>
+            <span class="stat-value">Status</span>
+          </button>
+          <div class="stat-card">
+            <span class="stat-label">Players</span>
+            <span class="stat-value mono" id="players">0/0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Server Uptime</span>
+            <span class="stat-value mono" id="uptime">0h 00m</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Session Time</span>
+            <span class="stat-value mono" id="playtime">0h 00m</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="scoreboard-body">
+        <p class="section-label body-label" id="services-title">Whitelisted Services</p>
+        <section class="services"></section>
+      </div>
+
+      <footer class="scoreboard-foot">
+        <p class="footer-hint">
+          Press <span class="keycap">ESC</span> to close and <span class="keycap">HOME</span> to open
+        </p>
+      </footer>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
